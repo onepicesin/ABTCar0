@@ -13,6 +13,7 @@
 	    "ABTCarIR.cpp",
         "ABTCar.cpp",
         "shims.d.ts",
+        "_locales/zh-cn/abtcar-strings.json",
         "enums.d.ts"
         
     ],
