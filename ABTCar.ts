@@ -708,7 +708,7 @@ namespace ABTCar {
         l_backward,
         //%block="左转"
         left,
-        //%block="后左转"
+        //%block="原地左转"
         l_forward,
         //%block="停止"
         stop
