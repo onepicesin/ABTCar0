@@ -1,6 +1,6 @@
 
  /**
- * ABT_Car 实战项目
+ * ABTCar 实战项目
  * 定义块链接：https://makecode.com/defining-blocks
  * 颜色参考链接：http://xh.5156edu.com/page/z1015m9220j18754.html
  */
@@ -9,7 +9,7 @@
  */
 //% color=#228B22 weight=20 icon="\uf1b9" block="ABTCar"
 //% groups=['ABT_display','ABT_music','ABT_sensor','ABT_Handle','ABT_electricmachinery','ABT_CarControl','ABT_ir']
-namespace ABT_Car {
+namespace ABTCar {
     //灯光显示 
     let yahStrip: neopixel.Strip;
     //% blockId=ABT_RGB_Car_Program block="RGB_Car_Program led"
@@ -1006,7 +1006,7 @@ namespace ABT_Car {
     
     
 }
-//% color=#228B22 weight=30 icon="\uf1b9" block="ABTIR"
+//% color=#228B22 weight=30 icon="\uf1eb" block="ABTIR"
 namespace ABT_IR {
     export enum irButton {
         //% blockId="SWITCH" block="开关"
