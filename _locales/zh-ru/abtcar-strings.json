@@ -1,5 +1,5 @@
 {
-    "ABTCar.RGB_Car_Program|block":"七彩琉璃燈",
+    
     "ABTCar.ABTMusic.dadadum|block": "音樂1",
     "ABTCar.ABTMusic.entertainer|block": "音樂2",
     "ABTCar.ABTMusic.prelude|block": "音樂3",
@@ -23,6 +23,7 @@
     "ABTCar.ABTsensor.MicroSeconds|block":"微秒",
     "ABTCar.ABTsensor.Centimeters|block":"釐米",
     "ABTCar.ABTsensor.Inches|block":"英寸",
+    "ABTCar.RGB_Car_Program|block":"七彩琉璃燈",
     "ABTCar.LED0|block":"LED灯|%cl|%value"
 
 }

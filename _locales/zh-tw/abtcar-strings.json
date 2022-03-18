@@ -1,5 +1,5 @@
 {
-    "ABTCar.RGB_Car_Program|block":"люминесцентная лампа",
+   
     "ABTCar.ABTMusic.dadadum|block": "музыка",
     "ABTCar.ABTMusic.entertainer|block": "музыка",
     "ABTCar.ABTMusic.prelude|block": "музыка",
@@ -23,6 +23,7 @@
     "ABTCar.ABTsensor.MicroSeconds|block":"микросекунда",
     "ABTCar.ABTsensor.Centimeters|block":"см сантиметр",
     "ABTCar.ABTsensor.Inches|block":"дюйм",
+    "ABTCar.RGB_Car_Program|block":"люминесцентная лампа",
     "ABTCar.LED0|block":"светодиодная лампа |%cl|%value"
 
 }
