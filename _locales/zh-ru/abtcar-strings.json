@@ -1,0 +1,28 @@
+{
+    "ABTCar.RGB_Car_Program|block":"七彩琉璃燈",
+    "ABTCar.ABTMusic.dadadum|block": "音樂1",
+    "ABTCar.ABTMusic.entertainer|block": "音樂2",
+    "ABTCar.ABTMusic.prelude|block": "音樂3",
+    "ABTCar.ABTMusic.ode|block": "音樂4",
+    "ABTCar.ABTMusic.nyan|block": "音樂5",   
+    "ABTCar.ABTMusic.ringtone|block": "音樂6",
+    "ABTCar.ABTMusic.funk|block": "音樂7",
+    "ABTCar.ABTMusic.blues|block": "音樂8",
+    "ABTCar.ABTMusic.birthday|block": "音樂9",
+    "ABTCar.ABTMusic.wedding|block": "音樂10",
+    "ABTCar.ABTMusic.funereal|block": "音樂11",
+    "ABTCar.ABTMusic.punchline|block": "音樂12",
+    "ABTCar.ABTMusic.baddy|block": "音樂13",
+    "ABTCar.ABTMusic.chase|block": "音樂14",
+    "ABTCar.ABTMusic.ba_ding|block": "音樂15",
+    "ABTCar.ABTMusic.wawawawaa|block": "音樂16",
+    "ABTCar.ABTMusic.jump_up|block": "音樂17",
+    "ABTCar.ABTMusic.jump_down|block": "音樂18",
+    "ABTCar.ABTMusic.power_up|block": "音樂19",
+    "ABTCar.ABTMusic.power_down|block": "音樂20",
+    "ABTCar.ABTsensor.MicroSeconds|block":"微秒",
+    "ABTCar.ABTsensor.Centimeters|block":"釐米",
+    "ABTCar.ABTsensor.Inches|block":"英寸",
+    "ABTCar.LED0|block":"LED灯|%cl|%value"
+
+}
