@@ -483,9 +483,9 @@ namespace ABTCar {
         LowerRight
     }
 
-    const x0 = 512;
-    const y0 = 512;
-    const z0 = 256;
+    const x0 = 500;
+    const y0 = 500;
+    const z0 = 250;
     //% blockId=ABT_ABTHandleControl 
     //% block="Handle_Control %direction|"
     //% weight=5
@@ -681,6 +681,8 @@ namespace ABTCar {
         let length = (list[1] + list[2] + list[3]) / 3;
         return Math.floor(length);
     }
+   
+   
     //% blockId=ABT_Voice_Sensor2 block="Voice Sensor return"
     //% weight=5
     //% blockGap=8
@@ -740,7 +742,7 @@ namespace ABTCar {
                 pins.analogWritePin(L_backward, 0);
                 pins.analogWritePin(L_forward, 1023);
                 pins.analogWritePin(R_backward, 0);
-                pins.analogWritePin(R_forward, 512);
+                pins.analogWritePin(R_forward, 255);
             }; break;
             case Controldirection.right: {
                 pins.analogWritePin(L_backward, 0);
@@ -751,7 +753,7 @@ namespace ABTCar {
             case Controldirection.r_backward: {
                 pins.analogWritePin(L_backward, 1023);
                 pins.analogWritePin(L_forward, 0);
-                pins.analogWritePin(R_backward, 512);
+                pins.analogWritePin(R_backward, 255);
                 pins.analogWritePin(R_forward, 0);
             }; break;
             case Controldirection.backward: {
@@ -761,7 +763,7 @@ namespace ABTCar {
                 pins.analogWritePin(R_forward, 0);
             }; break;
             case Controldirection.l_backward: {
-                pins.analogWritePin(L_backward, 512);
+                pins.analogWritePin(L_backward, 255);
                 pins.analogWritePin(L_forward, 0);
                 pins.analogWritePin(R_backward, 1023);
                 pins.analogWritePin(R_forward, 0);
@@ -774,7 +776,7 @@ namespace ABTCar {
             }; break;
             case Controldirection.l_forward: {
                 pins.analogWritePin(L_backward, 0);
-                pins.analogWritePin(L_forward, 512);
+                pins.analogWritePin(L_forward, 255);
                 pins.analogWritePin(R_backward, 0);
                 pins.analogWritePin(R_forward, 1023);
             }; break;

@@ -1,5 +1,6 @@
 #include "pxt.h"
 
+using namespace pxt;
 namespace ABTCarIR { 
 int ir_code = 0x00;//数据码
 int ir_addr = 0x00;//地址码
@@ -75,7 +76,7 @@ void remote_decode(void){
         nowtime = system_timer_current_time_us();
         if((nowtime - lasttime) > 100000){//超过100 ms,表明此时没有按键按下
             ir_code = 0x00;
-            return;
+            return -2;
         }
     }
     //如果高电平持续时间不超过100ms
@@ -89,11 +90,11 @@ void remote_decode(void){
             pulse_deal();
             if((ir_code+uir_code==0xff)&&(ir_addr+uir_addr==0xff)){
                 data = ir_code;
-                return;//ir_code;
+                return -3;//ir_code;
                 //uBit.serial.printf("addr=0x%X,code = 0x%X\r\n",ir_addr,ir_code);
             }else{
                 data = 0x00;
-                return;
+                return -4;
             }
         }else if((lasttime - nowtime) > 2000 && (lasttime - nowtime) < 2500){//2.25ms,表示发的跟上一个包一致
             while(!uBit.io.P5.getDigitalValue());//低等待
@@ -101,7 +102,7 @@ void remote_decode(void){
             if((nowtime - lasttime) > 500 && (nowtime - lasttime) < 700){//560us
                 //uBit.serial.printf("addr=0x%X,code = 0x%X\r\n",ir_addr,ir_code);
                 data = ir_code;
-                return;//ir_code;i
+                return -5;//ir_code;i
             }
         }
     }
