@@ -267,6 +267,7 @@ namespace ABTCar {
     }
 
     //传感器
+//声音
     export enum ABTVoice {
         //% blockId="Voice" block="有声音"
         Voice = 0,
@@ -289,7 +290,7 @@ namespace ABTCar {
         }
     }
 
-
+//超声波
     export enum ABTsensor {
         //% blockId="MicroSeconds" block="μs"
         MicroSeconds = 0,
@@ -352,13 +353,13 @@ namespace ABTCar {
             return false;
         }
     }
-    //% blockId=ABT_IR_Send block="IR_Send|pin %pin"
+    //% blockId=ABT_IR_Send block="IR_Send"
     //% weight=5
     //% blockGap=8
     //% color="#228B22"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function IR_Send(pin: DigitalPin): void {
+    export function IR_Send(): void {
         IR_send_38k();
     }
 
@@ -622,7 +623,7 @@ namespace ABTCar {
                 if (pins.analogReadPin(AnalogPin.P1) < 500) {
                     temp = true;
                 }
-                else { 
+                else {
                     temp = false;
                 }
             }
@@ -630,13 +631,12 @@ namespace ABTCar {
                 if (pins.analogReadPin(AnalogPin.P1) < 500) {
                     temp = false;
                 }
-                else { 
+                else {
                     temp = true;
                 }
-            }
-                
+            }   
         }
-        if(direct==ABTKeyState.leftstate) {
+        if(direct==ABTKeyState.rightstate) {
             if (LineC == ABTLinesensor.black) {
                 if (pins.analogReadPin(AnalogPin.P2) < 500) {
                     temp = true;
