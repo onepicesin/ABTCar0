@@ -742,7 +742,7 @@ namespace ABTCar {
                 pins.analogWritePin(L_backward, 0);
                 pins.analogWritePin(L_forward, 1023);
                 pins.analogWritePin(R_backward, 0);
-                pins.analogWritePin(R_forward, 255);
+                pins.analogWritePin(R_forward, 0);
             }; break;
             case Controldirection.right: {
                 pins.analogWritePin(L_backward, 0);
@@ -753,7 +753,7 @@ namespace ABTCar {
             case Controldirection.r_backward: {
                 pins.analogWritePin(L_backward, 1023);
                 pins.analogWritePin(L_forward, 0);
-                pins.analogWritePin(R_backward, 255);
+                pins.analogWritePin(R_backward, 0);
                 pins.analogWritePin(R_forward, 0);
             }; break;
             case Controldirection.backward: {
@@ -763,7 +763,7 @@ namespace ABTCar {
                 pins.analogWritePin(R_forward, 0);
             }; break;
             case Controldirection.l_backward: {
-                pins.analogWritePin(L_backward, 255);
+                pins.analogWritePin(L_backward, 0);
                 pins.analogWritePin(L_forward, 0);
                 pins.analogWritePin(R_backward, 1023);
                 pins.analogWritePin(R_forward, 0);
@@ -776,7 +776,7 @@ namespace ABTCar {
             }; break;
             case Controldirection.l_forward: {
                 pins.analogWritePin(L_backward, 0);
-                pins.analogWritePin(L_forward, 255);
+                pins.analogWritePin(L_forward, 0);
                 pins.analogWritePin(R_backward, 0);
                 pins.analogWritePin(R_forward, 1023);
             }; break;
