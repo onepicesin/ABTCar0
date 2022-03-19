@@ -1012,47 +1012,47 @@ namespace ABTCar {
 namespace ABT_IR {
     export enum irButton {
         //% blockId="SWITCH" block="开关"
-        SWITCH = 0xA2,
+        SWITCH = 69,
         //% blockId="MENU" block="菜单"
-        MENU = 0xE2,
+        MENU = 71,
         //% blockId="TEST" block="TEST"
-        TEST = 0x22,
+        TEST = 68,
         //% blockId="RETURN" block="返回"
-        RETURN = 0xC2,
+        RETURN = 67,
         //% blockId="Pausestart" block="暂停开始"
-        Pausestart = 0xA8,
+        Pausestart = 21,
         //% blockId="ADD" block="+"
-        ADD = 0x02,
+        ADD = 64,
         //% blockId="reduce" block="—"
-        reduce = 0x98,
+        reduce = 25,
         //% blockId="LEFT" block="左"
-        LEFT = 0xE0,
+        LEFT = 7,
         //% blockId="RIGHT" block="右"
-        RIGHT = 0x90,
+        RIGHT = 9,
         //% blockId="C" block="C"
-        C = 0xB0,
+        C = 13,
         //% blockId="NUM0" block="0"
-        NUM0 = 0x68,
+        NUM0 = 22,
         //% blockId="NUM1" block="1"
-        NUM1 = 0x30,
+        NUM1 = 12,
         //% blockId="NUM2" block="2"
-        NUM2 = 0x18,
+        NUM2 = 24,
         //% blockId="NUM3" block="3"
-        NUM3 = 0x7A,
+        NUM3 = 94,
         //% blockId="NUM4" block="4"
-        NUM4 = 0x10,
+        NUM4 = 8,
         //% blockId="NUM5" block="5"
-        NUM5 = 0x38,
+        NUM5 = 28,
         //% blockId="NUM6" block="6"
-        NUM6 = 0x5A,
+        NUM6 = 90,
         //% blockId="NUM7" block="7"
-        NUM7 = 0x42,
+        NUM7 = 66,
         //% blockId="NUM8" block="8"
-        NUM8 = 0x4A,
+        NUM8 = 82,
         //% blockId="NUM9" block="9"
-        NUM9 = 0x52,
+        NUM9 = 74,
         //% blockId="NU" block="空"
-        NU = 0x00
+        NU = 0
     }
     let state: number;
     let data1: number;
