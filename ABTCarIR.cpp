@@ -21,8 +21,7 @@ int logic_value(){//根据频率的时长 判断逻辑值"0"和"1"子函数
         }else if((lasttime - nowtime)>1500 && (lasttime - nowtime) < 1800){//遥控上低频率接着高电平1.7ms 因为有上拉电阻
             return 1;
        }
-    }
-    return -1;//低电平不是560us 所以发送的不是0 1
+    }//低电平不是560us 所以发送的不是0 1
 }
 
 
@@ -76,7 +75,6 @@ void remote_decode(void){
         nowtime = system_timer_current_time_us();
         if((nowtime - lasttime) > 100000){//超过100 ms,表明此时没有按键按下
             ir_code = 0x00;
-            return -2;
         }
     }
     //如果高电平持续时间不超过100ms
@@ -89,20 +87,17 @@ void remote_decode(void){
         if((lasttime - nowtime) > 4000 && (lasttime - nowtime) < 5000){//引导码低电平4.5ms,接收到了红外协议头且是新发送的数据。开始解析逻辑0和1
             pulse_deal();
             if((ir_code+uir_code==0xff)&&(ir_addr+uir_addr==0xff)){
-                data = ir_code;
-                return -3;//ir_code;
+                data = ir_code;//ir_code;
                 //uBit.serial.printf("addr=0x%X,code = 0x%X\r\n",ir_addr,ir_code);
             }else{
                 data = 0x00;
-                return -4;
             }
         }else if((lasttime - nowtime) > 2000 && (lasttime - nowtime) < 2500){//2.25ms,表示发的跟上一个包一致
             while(!uBit.io.P5.getDigitalValue());//低等待
             nowtime = system_timer_current_time_us();
             if((nowtime - lasttime) > 500 && (nowtime - lasttime) < 700){//560us
                 //uBit.serial.printf("addr=0x%X,code = 0x%X\r\n",ir_addr,ir_code);
-                data = ir_code;
-                return -5;//ir_code;i
+                data = ir_code;//ir_code;i
             }
         }
     }
