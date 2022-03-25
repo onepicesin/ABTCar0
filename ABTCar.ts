@@ -721,6 +721,69 @@ namespace ABTCar {
     let L_backward = AnalogPin.P14;
     let R_backward = AnalogPin.P15;
     let R_forward = AnalogPin.P16;
+    /**
+    * 设置ABTCar的电机速度
+    */
+    //% blockId=move
+    //% block="ABTCar: LEFT: $left \\%, FIGHT: $right \\%"
+    //% left.shadow="speedPicker"
+    //% right.shadow="speedPicker"
+    //% group="ABT_CarControl"
+    //% weight=5
+    //% blockGap=8
+    //% color="#228B22"
+    export function move(left: number, right: number) {
+        if (left >= 0) {
+            pins.analogWritePin(L_backward, 0);
+            pins.analogWritePin(L_forward, Math.map(left, 0, 100, 0, 1023));
+        } else if (left < 0) {
+            pins.analogWritePin(L_backward, Math.map(Math.abs(left), 0, 100, 0, 1023));
+            pins.analogWritePin(L_forward, 0);
+        }
+        if (right >= 0) {
+            pins.analogWritePin(R_backward, 0);
+            pins.analogWritePin(R_forward, Math.map(right, 0, 100, 0, 1023));
+        } else if (right < 0) {
+            pins.analogWritePin(R_backward, Math.map(Math.abs(right), 0, 100, 0, 1023));
+            pins.analogWritePin(R_forward, 0);
+        }
+    }
+
+    /**
+    * ABTCar 停止
+    */
+    //% blockId=stop
+    //% block="BitCar: stop"
+    //% weight=5
+    //% blockGap=8
+    //% color="#228B22"
+    //% group="ABT_CarControl"
+    export function stop() {
+        pins.analogWritePin(L_backward, 0);
+        pins.analogWritePin(L_forward, 0);
+        pins.analogWritePin(R_backward, 0);
+        pins.analogWritePin(R_forward, 0);
+    }
+
+    /**
+    * 当ABTCar静止不动时，让它从地面站起来，然后停下来，如果没有这样做，尝试调整电机速度和通电时间
+    */
+    //% blockId=standup_still
+    //% block="ABTCar: stand up with speed $speed \\% charge $charge|(ms)"
+    //% weight=5
+    //% blockGap=8
+    //% color="#228B22"
+    //% speed.defl=100
+    //% speed.min=0 speed.max=100
+    //% charge.defl=250
+    //% group="ABT_CarControl"
+    export function standup_still(speed: number, charge: number) {
+        move(-speed, -speed);
+        basic.pause(200);
+        move(speed, speed);
+        basic.pause(charge);
+        stop();
+    }
     
     
     //% blockId=ABT_ABTCar block="ABTCar direction %direction|"
