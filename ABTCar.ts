@@ -12,7 +12,7 @@
 namespace ABTCar {
     //灯光显示 
     let yahStrip: neopixel.Strip;
-    //% blockId=ABT_RGB_Car_Program block="RGB_Car_Program led"
+    //%  block="RGB_Car_Program led"
     //% weight=5
     //% blockGap=8
     //% color="#228B22"
