@@ -1147,30 +1147,30 @@ namespace ABT_IR {
         return valuotokeyConversion();
     }
     
-    //% blockId="IR_callbackUser"
-    //% weight=50
-    //% block="on IR received"
-    //% draggableParameters
-    export function IR_callbackUser(cb: (message: number) => void) {
-        pins.setPull(DigitalPin.P5, PinPullMode.PullUp)
-        state = 1;
-        control.onEvent(11, 22, function () {//当注册事件发生时运行一些代码。
-            cb(data1)
+    // //% blockId="IR_callbackUser"
+    // //% weight=50
+    // //% block="on IR received"
+    // //% draggableParameters
+    // export function IR_callbackUser(cb: (message: number) => void) {
+    //     pins.setPull(DigitalPin.P5, PinPullMode.PullUp)
+    //     state = 1;
+    //     control.onEvent(11, 22, function () {//当注册事件发生时运行一些代码。
+    //         cb(data1)
 
-        })
-    }
+    //     })
+    // }
 
-    basic.forever(() => {
-        if (state == 1) {
-            irstate = irCode();
-            if (irstate != 0) {
-                data1 = irstate & 0xff;
-                control.raiseEvent(11, 22)//宣布某个事件源发生了某事。
-            }
-        }
+    // basic.forever(() => {
+    //     if (state == 1) {
+    //         irstate = irCode();
+    //         if (irstate != 0) {
+    //             data1 = irstate & 0xff;
+    //             control.raiseEvent(11, 22)//宣布某个事件源发生了某事。
+    //         }
+    //     }
 
-        basic.pause(50);
-    })
+    //     basic.pause(50);
+    // })
 
     function valuotokeyConversion(): number {
         //serial.writeValue("x", irCode() )

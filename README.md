@@ -9,7 +9,7 @@
 * 点击齿轮图标菜单下的 **扩展**
 * 搜索 **https://github.com/onepicesin/ABTCar0.git** 并导入
 
-## 编辑此项目 ![构建状态标志](https://github.com/tangjie133/pxt-dfrobot_ir/workflows/MakeCode/badge.svg)
+## 编辑此项目 ![构建状态标志](https://github.com/onepicesin/ABTCar0.git/icon1.png)
 
 在 MakeCode 中编辑此仓库。
 
