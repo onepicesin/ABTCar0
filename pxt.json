@@ -20,6 +20,8 @@
         "enums.d.ts"
         
     ],
-    "testFiles": [],
+    "testFiles": [
+        "test.ts"
+    ],
     "public": true
 }

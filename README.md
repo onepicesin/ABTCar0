@@ -1,41 +1,32 @@
-# gator:light Light Sensor
+> 在 [https://github.com/onepicesin/ABTCar0.git/](https://github.com/onepicesin/ABTCar0.git/) 打开此页面
 
-[![Community Discord](https://img.shields.io/discord/448979533891371018.svg)](https://aka.ms/makecodecommunity)
+## 用作扩展
 
-The gator:starter, which includes the gator:light and gator:temp can be purchased [here.](https://www.sparkfun.com/products/14891)
-The gator:light, included on the gator:starter is an analog light sensor that can be alligator clipped to the micro:bit or gator:bit board.
+此仓库可以作为 **插件** 添加到 MakeCode 中。
 
-![SparkFun gator:light](https://raw.githubusercontent.com/sparkfun/pxt-gator-light/master/icon.png)  
+* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* 点击 **新项目**
+* 点击齿轮图标菜单下的 **扩展**
+* 搜索 **https://github.com/onepicesin/ABTCar0.git** 并导入
 
-## ~ hint
+## 编辑此项目 ![构建状态标志](https://github.com/tangjie133/pxt-dfrobot_ir/workflows/MakeCode/badge.svg)
 
-To use this package, go to https://makecode.microbit.org, click ``Add package`` and search for **gator-light**. The package is located [here](https://makecode.microbit.org/pkg/sparkfun/pxt-gator-light)
+在 MakeCode 中编辑此仓库。
 
-## ~
+* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* 点击 **导入**，然后点击 **导入 URL**
+* 粘贴 **https://github.com/onepicesin/ABTCar0.git** 并点击导入
 
-## Basic usage
+## 积木块预览
 
-```blocks
-//Sets the value of the light variable to the value read from the gator:light
-let light = 0
-light = gatorlight.light(AnalogPin.P0, gatorlightType.Lux)
-```
+此图像显示主分支中最后一次提交的块代码。
+此图像可能需要几分钟才能刷新。
 
-Use ``||Get light on pin||`` to read the light value from a gator:light sensor attached to a given pin in lux or the straight ADC value.
+![块的渲染视图](https://github.com/onepicesin/ABTCar0.git/icon1.png)
 
-## Example: Light Detector
+#### 元数据（用于搜索、渲染）
 
-```blocks
-//Read light value and write it to the micro:bit screen as a bar graph.
-let light = 0
-basic.forever(function () {
-    light = gatorlight.light(AnalogPin.P0, gatorlightType.Lux)
-    led.plotBarGraph(
-        light,
-        1023
-    )
-})
-```
+![红外块的渲染视图](https://github.com/onepicesin/ABTCar0.git/icon.png)
 
 ## Supported targets
 
