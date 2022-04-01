@@ -1,4 +1,17 @@
 {
+    "ABT_Sensor.IR|block": "红外传感器|引脚 %pin|返回 %value",
+    "ABT_Sensor.Sound|block": "声音传感器|引脚 %pin",
+    "ABT_Sensor.Light|block": "光敏传感器|引脚 %pin",
+    "ABT_Sensor.Vibration|block": "震动传感器|引脚 %pin|摇动时",
+    "ABT_Sensor.Hall|block": "霍尔传感器|引脚 %pin|磁铁靠近时",
+    "ABT_Sensor.Ultrasonic|block": "超声波|发射引脚 %Trig|接收引脚 %Echo",
+    "ABT_Sensor.GetRGBValue|block": "颜色传感器|返回 %value",
+    "ABT_Sensor.enGetRGB.GetValueR|block": "R值",
+    "ABT_Sensor.enGetRGB.GetValueG|block": "G值",
+    "ABT_Sensor.enGetRGB.GetValueB|block": "B值",
+    "ABT_Sensor.enObstacle.Obstacle|block": "有障碍",
+    "ABT_Sensor.enObstacle.NoObstacle|block": "无障碍",
+
     "ABTCar.Music|block":"车载音乐",
     "ABTCar.ABTMusic.dadadum|block": "音乐1",
     "ABTCar.ABTMusic.entertainer|block": "音乐2",
