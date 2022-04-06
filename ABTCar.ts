@@ -12,6 +12,10 @@
 namespace ABTCar {
     //灯光显示 
     let yahStrip: neopixel.Strip;
+    /**
+     * 七彩灯
+     */
+    
     //%  block="RGB_Car_Program led"
     //% weight=5
     //% blockGap=8
@@ -60,6 +64,9 @@ namespace ABTCar {
         //% blockId="all" block="全部"
         all = 2
     }
+    /**
+     * 控制引脚灯亮灭
+     */
     //% blockId=ABT_LED0 block="LED1|pin %pin|value %value"
     //% weight=5
     //% blockGap=8
@@ -70,6 +77,9 @@ namespace ABTCar {
         pins.digitalWritePin(pin, value);
     }
 
+    /**
+     * 控制引脚灯亮度
+     */
     //% blockId=ABT_LED1 block="LED2|pin %pin|value %value"
     //% weight=4
     //% blockGap=8
@@ -80,6 +90,10 @@ namespace ABTCar {
     export function LED2(pin: AnalogPin, value: number): void {
         pins.analogWritePin(pin, value * 1024 / 256);
     }
+
+    /**
+     * 呼吸灯
+     */
     //% blockId=ABT_BreathLED block="BreathLED|pin %pin"
     //% weight=3
     //% blockGap=8
@@ -99,6 +113,10 @@ namespace ABTCar {
             control.waitMicros(1000);
         }
     }
+
+    /**
+     * 控制灯的颜色亮度
+     */
     //% blockId=ABT_RGB block="RGB|pin1 %pin1|value1 %value1|pin2 %pin2|value2 %value2|pin3 %pin3|value3 %value3"
     //% weight=2
     //% blockGap=8
@@ -111,6 +129,10 @@ namespace ABTCar {
         pins.analogWritePin(pin2, value2 * 1024 / 256);
         pins.analogWritePin(pin3, value3 * 1024 / 256);
     }
+
+    /**
+     * 控制灯的颜色
+     */
     //% blockId=ABT_RGB1 block="RGB|pin1 %pin1|pin2 %pin2|pin3 %pin3|value %value"
     //% weight=1
     //% blockGap=8
@@ -169,6 +191,9 @@ namespace ABTCar {
         //% blockId="ring" block="响"
         ring
     }
+    /**
+     * 控制蜂鸣器的开关
+     */
     //% blockId=ABT_Buzzer block="Buzzer|pin %pin|value %value"
     //% weight=96
     //% blockGap=8
@@ -176,8 +201,8 @@ namespace ABTCar {
     //% value.min=0 value.max=1
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=8
     export function Buzzer(pin: DigitalPin, value: ABTBuzzer): void {
-        pins.setPull(DigitalPin.P0, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P0, value);
+        pins.setPull(pin, PinPullMode.PullNone);
+        pins.digitalWritePin(pin, value);
     }
 
     export enum ABTMusic {
@@ -222,6 +247,10 @@ namespace ABTCar {
         //% blockId="power_down" block="power_down"
         power_down
     }
+
+    /**
+     * 播放音乐
+     */
     //% blockId=ABT_Music block="Music|%index|"
     //% weight=96
     //% blockGap=8
@@ -253,7 +282,9 @@ namespace ABTCar {
     }
 
     //传感器
-    //声音 是否有声音
+    /**
+     * 声音传感器 判断是否有声音
+     */
     export enum ABTVoice {
         //% blockId="Voice" block="有声音"
         Voice = 0,
@@ -277,7 +308,10 @@ namespace ABTCar {
     }
    
 
-    //声音传感器 音量大小
+    /**
+     * 声音传感器 返回声音大小
+     */
+    
     //% blockId=ABT_Voice_Sound block="Sound|pin %pin"
     //% weight=5
     //% blockGap=8
@@ -290,7 +324,9 @@ namespace ABTCar {
         return value;
     }
 
-    //光敏传感器
+    /**
+     * 光敏传感器 返回监测到的亮度
+     */
     //% blockId=ABT_Sensor_Light block="Light|pin %pin"
     //% weight=5
     //% blockGap=8
@@ -303,7 +339,7 @@ namespace ABTCar {
         return value;
     }
 
-    //超声波传感器
+ 
     export enum ABTsensor {
         //% blockId="MicroSeconds" block="μs"
         MicroSeconds = 0,
@@ -312,6 +348,9 @@ namespace ABTCar {
         //% blockId="inches" block="inches"
         Inches
     }
+     /**
+     * 超声波传感器
+     */
     //% blockId=ABT_ping block="ABT_ping sendout %sendout|receive %receive|distanceunit %distanceunit"
     //% weight=5
     //% blockGap=8
@@ -350,6 +389,9 @@ namespace ABTCar {
             control.waitMicros(13);
         }
     }
+    /**
+     * 红外传感器检查是否接收返回信号
+     */
     //% blockId=ABT_IR_Sensor block="IR_Sensor|pin %pin|or %value|障碍物"
     //% weight=5
     //% blockGap=8
@@ -366,6 +408,9 @@ namespace ABTCar {
             return false;
         }
     }
+    /**
+     * 红外传感器 发送红外信号
+     */
     //% blockId=ABT_IR_Send block="IR_Send"
     //% weight=5
     //% blockGap=8
@@ -376,7 +421,9 @@ namespace ABTCar {
         IR_send_38k();
     }
 
-    //震动传感器 摇动时触发
+    /**
+     * 震动传感器 摇动时触发
+     */
     //% blockId=ABT_Sensor_Vibration block="Vibration|pin %pin|get "
     //% weight=5
     //% blockGap=8
@@ -391,8 +438,10 @@ namespace ABTCar {
         pins.setEvents(pin, PinEventType.Edge);
         control.onEvent(pin, DAL.MICROBIT_PIN_EVT_FALL, handle);
     }
-
-    //霍尔传感器 磁铁靠近时触发
+    /**
+     * 霍尔传感器 磁铁靠近时触发
+     */
+    
     //% blockId=ABT_Sensor_Hall block="Hall|pin %pin|get "
      //% weight=5
     //% blockGap=8
@@ -431,7 +480,9 @@ namespace ABTCar {
         //% block="松开"
         pressed = 1
     }
-    
+    /**
+     * 判断是否按键按下
+     */
     //% blockId=ABT_Button block="Button|key %key|value %value"
     //% weight=5
     //% blockGap=8
@@ -482,6 +533,9 @@ namespace ABTCar {
     function init(): void {
         return;
     }
+     /**
+     * 当按键按下松开点击发生什么
+     */
     //% blockId=ABT_OnKey1
     //% weight=5
     //% blockGap=8
@@ -492,10 +546,12 @@ namespace ABTCar {
         if (!posi_init) {
             InitialPosition();
         }
-
         init();
         control.onEvent(<number>key, <number>keyEvent, handler); // register handler
     }
+     /**
+     * 判断是否按键按下
+     */
     //% blockId=ABT_KeyPressed1
     //% weight=5
     //% blockGap=8
@@ -532,6 +588,9 @@ namespace ABTCar {
     const x0 = 500;
     const y0 = 500;
     const z0 = 250;
+     /**
+     * 控制手柄的上下左右斜向操作
+     */
     //% blockId=ABT_ABTHandleControl 
     //% block="Handle_Control %direction|"
     //% weight=5
@@ -610,10 +669,10 @@ namespace ABTCar {
             pins.digitalWritePin(DigitalPin.P8, 0);
         }
     }
+     /**
+     * 判断是否按键按下
+     */
     //% blockId=ABT_Input_Button block="Button|pin %pin|value %value"
-    //% weight=98
-    //% blockGap=20
-    //% color="#808080"
     //% weight=5
     //% blockGap=8
     //% color="#ee0e3d"
@@ -625,7 +684,10 @@ namespace ABTCar {
 
 
     //电机
-    //电扇灭火器
+     /**
+     * 电扇灭火器
+     */
+    
     //% blockId=ABT_Fan block="Fan|pin %pin|speed %value"
     //% weight=5
     //% blockGap=8
@@ -636,8 +698,9 @@ namespace ABTCar {
     export function Fan(pin: AnalogPin, value: number): void {
         pins.analogWritePin(pin, Math.map(value, 0, 255, 0, 1024));
     }
-
-    //舵机
+    /**
+     * 舵机
+     */
     //% blockId=ABT_Servo block="Servo|pin %pin|value %value"
     //% weight=5
     //% blockGap=8
@@ -650,7 +713,9 @@ namespace ABTCar {
         pins.servoWritePin(pin, value);
     }
 
-    //直流电机 控制速度
+    /**
+     * 直流电机 控制电机速度0~1024
+     */
     //% blockId=ABT_MotorRun block="Motor|%pin|speed %speed"
      //% weight=5
     //% blockGap=8
@@ -661,8 +726,9 @@ namespace ABTCar {
     export function MotorRun(pin: AnalogPin, speed: number): void {
         pins.analogWritePin(pin, speed);
     }
-
-    //控制电机停止
+    /**
+     * 控制电机停止
+     */
     //% blockId=ABT_MotorStop block="MotorStop |pin %pin"
     //% weight=5
     //% blockGap=8
@@ -687,6 +753,9 @@ namespace ABTCar {
         //% block="右边状态"
         rightstate,
     }
+    /**
+     * 寻迹小车
+     */
     //% blockId=ABT_LineSenor block="ABT_Lineping direct %direct|or LineC %LineC"
     //% weight=5
     //% blockGap=8
@@ -737,7 +806,9 @@ namespace ABTCar {
         return temp;
     }
 
-
+    /**
+     * 返回超声波距离
+     */
     //% blockId=ABT_ping_Car block="ultrasonic return distance(cm)"
     //% weight=5
     //% blockGap=8
@@ -761,7 +832,9 @@ namespace ABTCar {
         return Math.floor(length);
     }
 
-
+    /**
+     * 返回声音传感器返回的声音大小
+     */
     //% blockId=ABT_Voice_Sensor2 block="Voice Sensor return"
     //% weight=5
     //% blockGap=8
@@ -864,7 +937,10 @@ namespace ABTCar {
         stop();
     }
 
-
+    
+    /**
+    * ABTCar 方向运动
+    */
     //% blockId=ABT_ABTCar block="ABTCar direction %direction|"
     //% weight=5
     //% blockGap=8
@@ -930,6 +1006,9 @@ namespace ABTCar {
             }; break;
         }
     }
+     /**
+    * ABTCar 方向运动可调速
+    */
     //% blockId=ABT_ABTCar1 block="ABTCar1 direction %direction|value %value|"
     //% weight=5
     //% blockGap=8
@@ -1013,6 +1092,9 @@ namespace ABTCar {
         //%block="停止"
         stop
     }
+     /**
+    * ABTCar 单个电机方向运动
+    */
     //% blockId=ABT_ABTCar2 block="ABTCar onec %onec|direction %direction|"
     //% weight=5
     //% blockGap=8
@@ -1085,6 +1167,9 @@ namespace ABTCar {
             }
         }
     }
+    /**
+    * ABTCar 单个电机方向运动 可调速
+    */
     //% blockId=ABT_ABTCar3 block="ABTCar3 onec1 %onec1|direction1 %direction1|value %value|"
     //% weight=5
     //% blockGap=8
@@ -1205,7 +1290,9 @@ namespace ABT_IR {
     function irCode(): number {
         return 0;
     }
-
+    /**
+    * 键接收到红外信号后的操作
+    */
     //% blockId="ABT_IR_received"
     //% weight=5
     //% blockGap=8
@@ -1219,7 +1306,9 @@ namespace ABT_IR {
         return false;
     }
 
-
+    /**
+    * 返回发射红外键的值 可判断进行操作
+    */
     //% blockId="IR_read3"
     //% weight=5
     //% blockGap=8
@@ -1265,6 +1354,3 @@ namespace ABT_IR {
         return irData;
     }
 }
-
-
-ee0e3d
