@@ -7,7 +7,7 @@
 /**
  * Provides access to basic micro:bit functionality.
  */
-//% color=#228B22 weight=20 icon="\uf1b9" block="ABTCar"
+//% color=#ee0e3d weight=20 icon="\uf1b9" block="ABTCar"
 //% groups=['ABT_display','ABT_music','ABT_sensor','ABT_Handle','ABT_electricmachinery','ABT_CarControl','ABT_ir']
 namespace ABTCar {
     //灯光显示 
@@ -15,7 +15,7 @@ namespace ABTCar {
     //%  block="RGB_Car_Program led"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_display"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB_Car_Program(): neopixel.Strip {
@@ -63,7 +63,7 @@ namespace ABTCar {
     //% blockId=ABT_LED0 block="LED1|pin %pin|value %value"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_display"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
     export function LED1(pin: DigitalPin, value: ABT_LED): void {
@@ -73,7 +73,7 @@ namespace ABTCar {
     //% blockId=ABT_LED1 block="LED2|pin %pin|value %value"
     //% weight=4
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% value.min=0 value.max=255
     //% group="ABT_display"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=2
@@ -83,7 +83,7 @@ namespace ABTCar {
     //% blockId=ABT_BreathLED block="BreathLED|pin %pin"
     //% weight=3
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_display"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=3
     export function BreathLED(pin: AnalogPin): void {
@@ -102,7 +102,7 @@ namespace ABTCar {
     //% blockId=ABT_RGB block="RGB|pin1 %pin1|value1 %value1|pin2 %pin2|value2 %value2|pin3 %pin3|value3 %value3"
     //% weight=2
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% value1.min=0 value1.max=255 value2.min=0 value2.max=255 value3.min=0 value3.max=255
     //% group="ABT_display"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -114,7 +114,7 @@ namespace ABTCar {
     //% blockId=ABT_RGB1 block="RGB|pin1 %pin1|pin2 %pin2|pin3 %pin3|value %value"
     //% weight=1
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_display"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function RGB1(pin1: DigitalPin, pin2: DigitalPin, pin3: DigitalPin, value: ABT_color): void {
@@ -263,7 +263,7 @@ namespace ABTCar {
     //% blockId=ABT_Voice_Sensor block="Voice_Sensor|pin %pin|value %value"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=7
     export function Voice_Sensor(pin: DigitalPin, value: ABTVoice): boolean {
@@ -281,7 +281,7 @@ namespace ABTCar {
     //% blockId=ABT_Voice_Sound block="Sound|pin %pin"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=7
     export function Sound(pin: AnalogPin): number {
@@ -294,7 +294,7 @@ namespace ABTCar {
     //% blockId=ABT_Sensor_Light block="Light|pin %pin"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=7
     export function Light(pin: AnalogPin): number {
@@ -315,7 +315,7 @@ namespace ABTCar {
     //% blockId=ABT_ping block="ABT_ping sendout %sendout|receive %receive|distanceunit %distanceunit"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=8
     export function ping(sendout: DigitalPin, receive: DigitalPin, distanceunit: ABTsensor): number {
@@ -353,7 +353,7 @@ namespace ABTCar {
     //% blockId=ABT_IR_Sensor block="IR_Sensor|pin %pin|or %value|障碍物"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function IR_Sensor(pin: DigitalPin, value: ABTIR): boolean {
@@ -369,7 +369,7 @@ namespace ABTCar {
     //% blockId=ABT_IR_Send block="IR_Send"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function IR_Send(): void {
@@ -380,7 +380,7 @@ namespace ABTCar {
     //% blockId=ABT_Sensor_Vibration block="Vibration|pin %pin|get "
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Vibration(pin: DigitalPin, handle: () => void): void {
@@ -396,7 +396,7 @@ namespace ABTCar {
     //% blockId=ABT_Sensor_Hall block="Hall|pin %pin|get "
      //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_sensor"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Hall(pin: DigitalPin, handle: () => void): void {
@@ -435,7 +435,7 @@ namespace ABTCar {
     //% blockId=ABT_Button block="Button|key %key|value %value"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_Handle"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function Button(key: ABT_Key, value: ABT_KeyState): boolean {
@@ -485,7 +485,7 @@ namespace ABTCar {
     //% blockId=ABT_OnKey1
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_Handle"
     //% block="on key %key| is %keyEvent"
     export function OnKey1(key: ABT_Key2, keyEvent: ABT_KeyState2, handler: Action) {
@@ -499,7 +499,7 @@ namespace ABTCar {
     //% blockId=ABT_KeyPressed1
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_Handle"
     //% block="key %key| is pressed"
     export function KeyPressed1(key: ABT_Key2): boolean {
@@ -536,7 +536,7 @@ namespace ABTCar {
     //% block="Handle_Control %direction|"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_Handle"
     export function ABTHandleControl(direction: ABTHandle): boolean {
         let x = pins.analogReadPin(AnalogPin.P1) - x0;
@@ -601,7 +601,7 @@ namespace ABTCar {
     //% shock.defl="true"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_Handle"
     export function shock(shock: boolean) {
         if (shock) {
@@ -616,7 +616,7 @@ namespace ABTCar {
     //% color="#808080"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_Handle"
     export function Button2(pin: DigitalPin, value: ABT_KeyState): boolean {
         pins.setPull(pin, PinPullMode.PullUp);
@@ -629,7 +629,7 @@ namespace ABTCar {
     //% blockId=ABT_Fan block="Fan|pin %pin|speed %value"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% value.min=0 value.max=255
     //% group=ABT_electric machinery
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=9
@@ -641,7 +641,7 @@ namespace ABTCar {
     //% blockId=ABT_Servo block="Servo|pin %pin|value %value"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% value.min=0 value.max=180
     //% value.defl=90
     //% group=ABT_electric machinery
@@ -654,7 +654,7 @@ namespace ABTCar {
     //% blockId=ABT_MotorRun block="Motor|%pin|speed %speed"
      //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% speed.min=0 speed.max=1023
     //% group=ABT_electric machinery
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
@@ -666,7 +666,7 @@ namespace ABTCar {
     //% blockId=ABT_MotorStop block="MotorStop |pin %pin"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group=ABT_electric machinery
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function MotorStop(pin: AnalogPin): void {
@@ -690,7 +690,7 @@ namespace ABTCar {
     //% blockId=ABT_LineSenor block="ABT_Lineping direct %direct|or LineC %LineC"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_CarControl"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=9
     export function LineSensor(direct: ABTKeyState, LineC: ABTLinesensor): boolean {
@@ -741,7 +741,7 @@ namespace ABTCar {
     //% blockId=ABT_ping_Car block="ultrasonic return distance(cm)"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_CarControl"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=10
     export function ping_Car(): number {
@@ -765,7 +765,7 @@ namespace ABTCar {
     //% blockId=ABT_Voice_Sensor2 block="Voice Sensor return"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_CarControl"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=7
     export function Voice_Sensor2(): number {
@@ -810,7 +810,7 @@ namespace ABTCar {
     //% group="ABT_CarControl"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     export function move(left: number, right: number) {
         if (left >= 0) {
             pins.analogWritePin(L_backward, 0);
@@ -835,7 +835,7 @@ namespace ABTCar {
     //% block="BitCar: stop"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_CarControl"
     export function stop() {
         pins.analogWritePin(L_backward, 0);
@@ -851,7 +851,7 @@ namespace ABTCar {
     //% block="ABTCar: stand up with speed $speed \\% charge $charge|(ms)"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% speed.defl=100
     //% speed.min=0 speed.max=100
     //% charge.defl=250
@@ -868,7 +868,7 @@ namespace ABTCar {
     //% blockId=ABT_ABTCar block="ABTCar direction %direction|"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_CarControl"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=7
     export function ABTCar(direction: Controldirection) {
@@ -933,7 +933,7 @@ namespace ABTCar {
     //% blockId=ABT_ABTCar1 block="ABTCar1 direction %direction|value %value|"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_CarControl"
     //%value.min=0 value.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=7
@@ -1016,7 +1016,7 @@ namespace ABTCar {
     //% blockId=ABT_ABTCar2 block="ABTCar onec %onec|direction %direction|"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_CarControl"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=7
     export function ABTCar2(onec: Electricmachinery, direction: Electricdirection) {
@@ -1088,7 +1088,7 @@ namespace ABTCar {
     //% blockId=ABT_ABTCar3 block="ABTCar3 onec1 %onec1|direction1 %direction1|value %value|"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#ee0e3d"
     //% group="ABT_CarControl"
     //%value.min=0 value.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=8
@@ -1150,7 +1150,7 @@ namespace ABTCar {
 
 
 }
-//% color=#228B22 weight=30 icon="\uf1eb" block="ABTIR"
+//% color=#0cd7e9 weight=30 icon="\uf1eb" block="ABTIR"
 namespace ABT_IR {
     export enum irButton {
         //% blockId="SWITCH" block="开关"
@@ -1209,7 +1209,7 @@ namespace ABT_IR {
     //% blockId="ABT_IR_received"
     //% weight=5
     //% blockGap=8
-    //% color="#228B22"
+    //% color="#0cd7e9"
     //% block="if|received|data|is %irbutton"
     export function IR_received(irbutton: irButton): boolean {
         pins.setPull(DigitalPin.P5, PinPullMode.PullUp)
@@ -1221,7 +1221,9 @@ namespace ABT_IR {
 
 
     //% blockId="IR_read3"
-    //% weight=60
+    //% weight=5
+    //% blockGap=8
+    //% color="#0cd7e9"
     //% block="read IR key value"
     export function IR_read(): number {
         pins.setPull(DigitalPin.P5, PinPullMode.PullUp)
@@ -1265,3 +1267,4 @@ namespace ABT_IR {
 }
 
 
+ee0e3d
