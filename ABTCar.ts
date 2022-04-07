@@ -585,9 +585,9 @@ namespace ABTCar {
         LowerRight
     }
 
-    const x0 = 500;
-    const y0 = 500;
-    const z0 = 250;
+    const x0 = 517;
+    const y0 = 520;
+    const z0 = 240;
      /**
      * 控制手柄的上下左右斜向操作
      */
