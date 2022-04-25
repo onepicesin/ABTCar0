@@ -13,7 +13,7 @@ namespace ABTCar {
      * 七彩灯
      */
     
-    //%  block="RGB_Car_Program led"
+    //%  block="七彩流光灯"
     //% weight=5
     //% blockGap=8
     //% color="#ee0e3d"
