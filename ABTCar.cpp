@@ -8,8 +8,8 @@ namespace ABTCar {
     void init() {
         if (initialized) return;
 
-    // mount buttons on the pins with a pullup mode
-    // TODO: fix this issue in the DAL itself
+    // 使用上拉模式在引脚上安装按钮
+    // 待办事项: 在DAL中解决这个问题
         #define ALLOC_PIN_BUTTON(id) new MicroBitButton(getPin(id)->name, id, MICROBIT_BUTTON_ALL_EVENTS, PullUp);
             ALLOC_PIN_BUTTON(MICROBIT_ID_IO_P13)
             ALLOC_PIN_BUTTON(MICROBIT_ID_IO_P14)

@@ -1,14 +1,11 @@
 
 /**
-* ABTCar 实战项目
+* ABTCar 阿斑兔实战项目
 * 定义块链接：https://makecode.com/defining-blocks
 * 颜色参考链接：http://xh.5156edu.com/page/z1015m9220j18754.html
 */
-/**
- * Provides access to basic micro:bit functionality.
- */
 //% color=#ee0e3d weight=20 icon="\uf1b9" block="ABTCar"
-//% groups=['ABT_display','ABT_music','ABT_sensor','ABT_Handle','ABT_electricmachinery','ABT_CarControl','ABT_ir']
+//% groups=['ABT_display','ABT_music','ABT_sensor','ABT_Handle','ABT_electricmachinery','ABT_CarControl']
 namespace ABTCar {
     //灯光显示 
     let yahStrip: neopixel.Strip;
